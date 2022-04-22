@@ -1,0 +1,18 @@
+function tryRemoveFromArray(arr,index){
+    if (index>=0 && index<arr.length){
+        for (let i = index-1; i >=0 ; i--) {
+            let temp=arr[index];
+            arr[index]=arr[i];
+            arr[i]=temp;
+            index--
+        }
+        return arr;
+    }
+    else {
+        return arr;
+    }
+}
+let arr=[1,2,3,4,5,6,7,8,9]
+tryRemoveFromArray(arr,3)
+arr.shift()
+console.log(arr)
